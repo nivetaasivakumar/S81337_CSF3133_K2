@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Profile Page</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Personal Profile Page</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact Form</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Article Section with Table -->
+        <article id="about">
+            <section>
+                <h2>Personal Information</h2>
+                <p>Below is a table displaying personal details:</p>
+                
+                <!-- Table (3 rows and 3 columns minimum) -->
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Occupation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alex Johnson</td>
+                            <td>24</td>
+                            <td>Software Developer</td>
+                        </tr>
+                        <tr>
+                            <td>Sarah Smith</td>
+                            <td>29</td>
+                            <td>UX Designer</td>
+                        </tr>
+                        <tr>
+                            <td>Michael Brown</td>
+                            <td>31</td>
+                            <td>Data Analyst</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+
+        <hr>
+
+        <!-- Section for Form -->
+        <section id="contact">
+            <h2>User Information Form</h2>
+            <form action="#" method="post">
+                
+                <!-- Text Inputs for Name and Email -->
+                <p>
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </p>
+                
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <!-- Radio Buttons for Gender -->
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </fieldset>
+                <br>
+
+                <!-- Checkboxes for Favorite Hobbies -->
+                <fieldset>
+                    <legend>Favorite Hobbies:</legend>
+                    <input type="checkbox" id="reading" name="hobbies" value="reading">
+                    <label for="reading">Reading</label><br>
+                    
+                    <input type="checkbox" id="coding" name="hobbies" value="coding">
+                    <label for="coding">Coding</label><br>
+                    
+                    <input type="checkbox" id="sports" name="hobbies" value="sports">
+                    <label for="sports">Sports</label><br>
+                    
+                    <input type="checkbox" id="music" name="hobbies" value="music">
+                    <label for="music">Music</label>
+                </fieldset>
+                <br>
+
+                <!-- Submit Button -->
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Personal Profile Lab. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
