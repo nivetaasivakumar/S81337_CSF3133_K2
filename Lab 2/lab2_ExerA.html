@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WEB-BASE INTEGRATION WORKSHOP 2026</title>
+    </head>
+    <body>
+        <header>
+            <h1>WEB-BASE INTEGRATION WORKSHOP 2026</h1>
+            <p>Future Website Designers</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#Schedule">Schedule</a></li>
+                <li><a href="#Register">Registration</a></li>
+                <li><a href="#About">About</a></li>
+            </ul>
+        </nav>
+        <section id ="About">
+            <h2>About the Event</h2>
+            <p>Welcome to Our WEB-BASE INTEGRATION WORKSHOP 2026</p>
+
+            <article>
+                <h3>Speaker Introduction</h3>
+                <p>Dr.NURUL NAZIHAH JAMAL who will share her insights on the website integration</p>
+
+                <h3>Activities : HTML Learning</h3>
+                <p>Dr.NURUL NAZIHAH JAMAL and her Team will teach the html tags and simple integration of website and let students to develop an simple website using html</p>
+            </article>
+        </section>
+        <section id ="Schedule">
+            <h2>Event Schedule</h2>
+            <table border="1">
+                <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                            <th>Venue</th>
+                            <th>PersonInCharge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9.00am</td>
+                            <td>Registration</td>
+                            <td>FSKM LOBBY</td>
+                            <td>NIVI</td>
+                        </tr>
+                        <tr>
+                            <td>10.00am</td>
+                            <td>Introduction to HTML</td>
+                            <td>LAB CISCO,FSKM</td>
+                            <td>NIVI</td>
+                        </tr>
+                        <tr>
+                            <td>11.00am</td>
+                            <td>Basic Webs Tags Learning & Website INTEGRATION</td>
+                            <td>rowspan="2">Cisco & MP3</td>
+                            <td>NIVI</td>
+                        </tr>
+                        <tr>
+                            <td>12.00am</td>
+                            <td>Website Development</td>
+                            <td>NIVI</td>
+                        </tr>
+                        <tr>
+                            <td>1.00am</td>
+                            <td>colspan="3">Lunch Break(FSKM CAFE)-By FSKM Cafe Management</td>
+                        </tr>
+                        <tr>
+                            <td>2.00pm - 5.00pm</td>
+                            <td>Complete Website Development and presentation</td>
+                            <td>LAB CISCO,FSKM</td>
+                            <td>NIVI</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+       <section id="register">
+        <h2>Registration Form</h2>
+        <form action="register.html" method="post">
+            
+            <!-- Text Inputs with matching label and input ids -->
+            <p>
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName" required>
+            </p>
+            
+            <p>
+                <label for="matricNumber">Matric Number:</label><br>
+                <input type="text" id="matricNumber" name="matricNumber" required>
+            </p>
+            
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <!-- Radio Buttons with shared name for Year of Study -->
+            <p>
+                <label>Year of Study:</label><br>
+                <input type="radio" id="year1" name="yearOfStudy" value="Year 1">
+                <label for="year1">Year 1</label><br>
+                
+                <input type="radio" id="year2" name="yearOfStudy" value="Year 2">
+                <label for="year2">Year 2</label><br>
+                
+                <input type="radio" id="year3" name="yearOfStudy" value="Year 3">
+                <label for="year3">Year 3</label><br>
+                
+                <input type="radio" id="year4" name="yearOfStudy" value="Year 4">
+                <label for="year4">Year 4</label>
+            </p>
+
+            <!-- Checkboxes for target sessions -->
+            <p>
+                <label>Sessions you want to join (Select at least 3):</label><br>
+                <input type="checkbox" id="session1" name="sessions" value="Opening Keynote">
+                <label for="session1">Basic Webs Tags Learning & Website INTEGRATION</label><br>
+                
+                <input type="checkbox" id="session2" name="sessions" value="UI/UX Workshop">
+                <label for="session2">Website Development</label><br>
+                
+                <input type="checkbox" id="session3" name="sessions" value="Coding Sprint">
+                <label for="session3">Website Development 2</label><br>
+                
+                <input type="checkbox" id="session4" name="sessions" value="Project Pitching">
+                <label for="session4">Final Project Development and Judging</label>
+            </p>
+
+            <!-- Drop-down Selection List with 4 options -->
+            <p>
+                <label for="faculty">Programme / Faculty:</label><br>
+                <select id="faculty" name="faculty">
+                    <option value="MOBILE COMPUTING">Faculty of Computer Science</option>
+                    <option value="Information Technology">Faculty of Information Technology</option>
+                    <option value="Software Engineering">Faculty of Software Engineering</option>
+                    <option value="Data Science">Faculty of Data Science & Analytics</option>
+                </select>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <input type="submit" value="Register Now">
+            </p>
+
+        </form>
+    </section>
+
+    <!-- SECTION 5: FOOTER -->
+    <footer>
+        <p>Organised by the Computing Student Faculty Committee</p>
+        <p>&copy; 2026 WEB-BASE INTEGRATION WORKSHOP Organising Committee. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
