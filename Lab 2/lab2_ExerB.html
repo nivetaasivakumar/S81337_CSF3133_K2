@@ -5,68 +5,127 @@
         <title>Course Feedback</title>
     </head> 
     <body>
+        <!-- SECTION 1: HEADER & NAV -->
         <header>
             <h1>CSF3133 Course Feedback</h1>
-        <!-- FIXED ERROR1: Replaced incorrect </head> with closing </header> tag -->
+        <!-- FIXED: Replaced incorrect </head> with closing </header> tag -->
         </header> 
         <nav>
-            <a href="#results">Results</a> | <a href="#form">Feedback Form</a> 
+            <a href="#results">Results</a> | <a href="#form">Feedback Form</a> | <a href="#comments">Student Comments</a>
         </nav>
+
+        <!-- SECTION 2: RESULTS SUMMARY -->
         <section id="results">
             <h2>Feedback Summary</h2>
             <table border="1">
                 <thead>
-                <tr>
-                    <th>Week</th>
-                    <th>Topic</th>
-                    <!-- FIXED ERROR2: Changed <td> to <th> for consistent header formatting -->
-                    <th>Rating</th>
-                </tr>
+                    <tr>
+                        <th>Week</th>
+                        <th>Topic</th>
+                        <!-- FIXED: Changed <td> to <th> for consistent table header formatting -->
+                        <th>Rating</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Introduction to HTML</td>
-                    <td>4.5</td>
-                <!-- FIXED ERROR3: Added missing </tr> tag -->
-                </tr>
-                <tr>
-                    <td>2</td> 
-                    <!-- FIXED ERROR4: Changed colspan="3" to colspan="2" to match 3 total table columns -->
-                    <td colspan="2">Tables and Forms</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <!-- FIXED ERROR5: Closed "Semantic HTML" cell properly before opening "4.0" cell -->
-                    <td>Semantic HTML</td>
-                    <td>4.0</td>
-                </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Introduction to HTML</td>
+                        <td>4.5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td> 
+                        <!-- FIXED: Changed colspan="3" to colspan="2" to match the 3 table columns -->
+                        <td colspan="2">Tables and Forms</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <!-- FIXED: Closed "Semantic HTML" cell properly before opening the rating cell -->
+                        <td>Semantic HTML</td>
+                        <td>4.0</td>
+                    </tr>
+                    <!-- NEW PART 2: Week 4 & 5 with rowspan="2" on Topic -->
+                    <tr>
+                        <td>4</td>
+                        <td rowspan="2">Mini Project</td>
+                        <td>4.8</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>4.7</td>
+                    </tr>
+                    <!-- NEW PART 2: Final row "Average Rating" using colspan="2" -->
+                    <tr>
+                        <td colspan="2">Average Rating</td>
+                        <td>4.5</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
+
+        <!-- SECTION 3: FEEDBACK FORM -->
         <section id="form">
             <h2>Give Your Feedback</h2>
             <form action="submit_feedback.php" method="post">
-                <!-- FIXED ERROR6: Matched label for="name" with input id="name" -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br>
+                <!-- FIXED: Matched label for="name" with input id="name" -->
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <!-- NEW PART 2: E-mail text input with matching label -->
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
                 
                 <label>Overall rating:</label><br>
-                <!-- FIXED ERROR7: Changed both radio buttons to share name="overallRating" so only one can be selected -->
+                <!-- FIXED: Changed radio buttons to share name="overallRating" and added 3rd option "Average" -->
                 <input type="radio" id="good" name="overallRating" value="good">
-                <label for="good">Good</label>
-                <input type="radio" id="poor" name="overallRating" value="poor">
-                <label for="poor">Poor</label><br>
+                <label for="good">Good</label><br>
                 
-                <!-- FIXED ERROR8: Matched input id="lab" with label for="lab" -->
+                <input type="radio" id="average" name="overallRating" value="average">
+                <label for="average">Average</label><br>
+
+                <input type="radio" id="poor" name="overallRating" value="poor">
+                <label for="poor">Poor</label><br><br>
+                
+                <!-- FIXED: Matched input id="lab" with label for="lab" -->
                 <input type="checkbox" id="lab" name="lab" value="yes">
-                <label for="lab">I attended all labs</label><br>
+                <label for="lab">I attended all labs</label><br><br>
+
+                <!-- NEW PART 2: Group of at least 3 checkboxes "Topics I want more practice on" -->
+                <label>Topics I want more practice on (Select at least 3):</label><br>
+                <input type="checkbox" id="topic1" name="practiceTopics" value="HTML Tags">
+                <label for="topic1">HTML Tags</label><br>
+                <input type="checkbox" id="topic2" name="practiceTopics" value="Tables">
+                <label for="topic2">Tables</label><br>
+                <input type="checkbox" id="topic3" name="practiceTopics" value="Forms">
+                <label for="topic3">Forms</label><br><br>
+
+                <!-- NEW PART 2: <select> for Section/Group with at least 3 options -->
+                <label for="sectionGroup">Section / Group:</label><br>
+                <select id="sectionGroup" name="sectionGroup">
+                    <option value="Group A">Group A</option>
+                    <option value="Group B">Group B</option>
+                    <option value="Group C">Group C</option>
+                </select><br><br>
                 
                 <input type="submit" value="Submit">
             </form>
         </section>
+
+        <!-- NEW PART 2: Student Comments Section -->
+        <section id="comments">
+            <h2>Student Comments</h2>
+            <article>
+                <h3>Nivetaa</h3>
+                <p>The course materials were extremely helpful for building my first portfolio page!</p>
+            </article>
+            <article>
+                <h3>Shoba</h3>
+                <p>I really enjoyed the lab sessions, especially learning how to structure tables and forms properly.</p>
+            </article>
+        </section>
+
+        <!-- SECTION 5: FOOTER -->
         <footer>
-            <!-- FIXED ERROR9: Added required semicolon to copyright entity (&copy;) -->
+            <!-- FIXED: Added required semicolon to copyright entity (&copy;) -->
             <p>Copyright &copy; 2026 CSF3133</p>
         </footer>
     </body>
