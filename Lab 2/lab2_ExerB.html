@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Course Feedback</title>
+    </head> 
+    <body>
+        <header>
+            <h1>CSF3133 Course Feedback</h1>
+        <!-- FIXED ERROR1: Replaced incorrect </head> with closing </header> tag -->
+        </header> 
+        <nav>
+            <a href="#results">Results</a> | <a href="#form">Feedback Form</a> 
+        </nav>
+        <section id="results">
+            <h2>Feedback Summary</h2>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Topic</th>
+                    <!-- FIXED ERROR2: Changed <td> to <th> for consistent header formatting -->
+                    <th>Rating</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Introduction to HTML</td>
+                    <td>4.5</td>
+                <!-- FIXED ERROR3: Added missing </tr> tag -->
+                </tr>
+                <tr>
+                    <td>2</td> 
+                    <!-- FIXED ERROR4: Changed colspan="3" to colspan="2" to match 3 total table columns -->
+                    <td colspan="2">Tables and Forms</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <!-- FIXED ERROR5: Closed "Semantic HTML" cell properly before opening "4.0" cell -->
+                    <td>Semantic HTML</td>
+                    <td>4.0</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="form">
+            <h2>Give Your Feedback</h2>
+            <form action="submit_feedback.php" method="post">
+                <!-- FIXED ERROR6: Matched label for="name" with input id="name" -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+                
+                <label>Overall rating:</label><br>
+                <!-- FIXED ERROR7: Changed both radio buttons to share name="overallRating" so only one can be selected -->
+                <input type="radio" id="good" name="overallRating" value="good">
+                <label for="good">Good</label>
+                <input type="radio" id="poor" name="overallRating" value="poor">
+                <label for="poor">Poor</label><br>
+                
+                <!-- FIXED ERROR8: Matched input id="lab" with label for="lab" -->
+                <input type="checkbox" id="lab" name="lab" value="yes">
+                <label for="lab">I attended all labs</label><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <footer>
+            <!-- FIXED ERROR9: Added required semicolon to copyright entity (&copy;) -->
+            <p>Copyright &copy; 2026 CSF3133</p>
+        </footer>
+    </body>
+</html>
