@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 3 - Contact Form & Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header-section, .content-section, .footer-section {
+            background: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header-section h1 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+        .header-section span {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="email"], input[type="date"], input[type="number"] {
+            padding: 8px;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+            border: 1px solid red;
+            border-radius: 4px;
+        }
+        input[type="range"] {
+            width: 100%;
+            max-width: 300px;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            color: cyan;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: lightcyan;
+        }
+        .calculator-box {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        output {
+            font-weight: bold;
+            color: green;
+        }
+        .footer-section {
+            text-align: center;
+            font-size: 0.9em;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>Website Inquiry Portal</h1>
+        <span>Connect with us and explore our interactive tools seamlessly.</span>
+    </div>
+
+    <div class="content-section">
+        <h2>Contact Form</h2>
+        <form action="#" method="POST">
+          
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-date">Preferred Contact Date:</label>
+                <input type="date" id="contact-date" name="contact_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="satisfaction">Satisfaction Level (1 to 10):</label>
+                <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5" oninput="this.nextElementSibling.value = this.value">
+                <output>5</output>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit Inquiry">
+            </div>
+        </form>
+
+        <div class="calculator-box">
+            <h3>Inline Calculator</h3>
+            <form oninput="result.value = Number(num1.value) + Number(num2.value)">
+                <div class="form-group">
+                    <label for="num1">Number 1:</label>
+                    <input type="number" id="num1" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="num2">Number 2:</label>
+                    <input type="number" id="num2" value="0">
+                </div>
+                <div class="form-group">
+                    <label>Sum Result: <output name="result" for="num1 num2">0</output></label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <p>Contact Support: support@example.com | Phone: +60 3-5555 1234</p>
+        <p>&copy; 2026 Lab Exercise Portal. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
