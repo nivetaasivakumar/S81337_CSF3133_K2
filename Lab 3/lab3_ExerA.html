@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Bakery - Online Order</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>CampusBake&reg; <span>- Freshly Baked Everyday on Campus!</span></h1>
+    </div>
+
+    <!-- Navigation Bar Section -->
+    <div id="nav">
+        <a href="#content">Home</a> | 
+        <a href="#sidebar">Menu &amp; Price List</a> | 
+        <a href="#footer">Contact Us</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="content">
+        <h2>Welcome to Our Online Bakery</h2>
+        <p>
+            We offer <strong>delicious</strong>, <em>freshly baked</em> treats made daily. 
+            Check out our <a href="#sidebar">price list</a> and fill in the order form below!
+        </p>
+
+        <!-- Order Form Container Section -->
+        <div>
+            <h3>Place Your Order</h3>
+            <form action="#" method="post" oninput="total.value = (parseInt(cupcakes.value) || 0) * 3 + (parseInt(cakeslices.value) || 0) * 5">
+                
+                <!-- Customer Information -->
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autofocus><br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 012-3456789" required><br><br>
+
+                <label for="email">E-mail Address:</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required><br><br>
+
+                <!-- Pick-up Details -->
+                <label for="pickupdate">Pick-up Date:</label>
+                <input type="date" id="pickupdate" name="pickupdate"><br><br>
+
+                <label for="pickuptime">Pick-up Time:</label>
+                <input type="time" id="pickuptime" name="pickuptime"><br><br>
+
+                <!-- Customization Options -->
+                <label for="flavour">Cake/Cupcake Flavour:</label>
+                <input id="flavour" name="flavour" list="flavours" placeholder="Choose or type a flavour">
+                <datalist id="flavours">
+                    <option value="Chocolate Fudge">
+                    <option value="Red Velvet">
+                    <option value="Vanilla Bean">
+                    <option value="Matcha Green Tea">
+                </datalist><br><br>
+
+                <label for="icingcolor">Icing Colour:</label>
+                <input type="color" id="icingcolor" name="icingcolor" value="#ffb6c1"><br><br>
+
+                <label for="sweetness">Sweetness Level (1-5):</label>
+                <input type="range" id="sweetness" name="sweetness" min="1" max="5" step="1" value="3"><br><br>
+
+                <!-- Quantity and Dynamic Calculator -->
+                <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+                <input type="number" id="cupcakes" name="cupcakes" min="0" value="0"><br><br>
+
+                <label for="cakeslices">Cake Slices (RM 5.00 each):</label>
+                <input type="number" id="cakeslices" name="cakeslices" min="0" value="0"><br><br>
+
+                <label for="total">Total Price (RM):</label>
+                <output id="total" name="total" for="cupcakes cakeslices">0</output><br><br>
+
+                <input type="submit" value="Submit Order">
+            </form>
+        </div>
+    </div>
+
+    <!-- Sidebar Section -->
+    <div id="sidebar">
+        <h2>Price List &amp; Promotions</h2>
+        <ul>
+            <li>CampusBake&reg; Signature Cupcakes - RM 3.00</li>
+            <li>Premium Cake Slices - RM 5.00</li>
+            <li>Special Offer: Orders &gt; 10 pieces get a free drink!</li>
+            <li>Student Discount: Show student ID for &pound;1 / &euro;1 off international items</li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <p>&copy; 2026 CampusBake&reg;. All rights reserved. &nbsp; | &nbsp; Designed for UMT Students</p>
+    </div>
+
+    <!---TESTING 
+    Testing 1: 
+    When clicking Submit with all fields empty, The browser stops the form from submitting and 
+    shows warning pop-up at the "Full Name" because it is set as required.
+
+    Testing 2: 
+    The browser blocks the submission and displays an error message telling you that an "@" 
+    symbol is missing because the input type is set to email.
+    -->
+
+</body>
+</html>
