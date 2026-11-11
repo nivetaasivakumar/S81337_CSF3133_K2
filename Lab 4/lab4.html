@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 4 - HTML5 & CSS</title>
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+
+        .internal-highlight {
+            background-color: #ffffff;
+            border-left: 4px solid #0056b3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Semantic Header -->
+    <header>
+        <h1 class="header-title">Web Development Lab 4</h1>
+        <p>Integrating HTML5 Semantic Elements & CSS Styling</p>
+    </header>
+
+    <!-- Navigation Bar using Unordered List -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#contact">Contact Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Semantic Section: About -->
+        <section id="about">
+            <h2>About This Project</h2>
+            <article class="internal-highlight">
+                <h3>Semantic HTML5 Structure</h3>
+                <p>
+                    This webpage utilizes modern HTML5 structural tags including 
+                    <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, 
+                    <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> to improve layout clarity and SEO.
+                </p>
+            </article>
+        </section>
+
+        <!-- Semantic Section: Media -->
+        <section id="media">
+            <h2>Embedded Media</h2>
+            <article>
+                <h3>Featured Video</h3>
+                <!-- Video Element with Captions -->
+                <div class="video-wrapper">
+                    <video controls width="20%">
+                        <source src="html5.mp4" type="video/mp4">
+                        <track src="html5.mp4" kind="subtitles" srclang="en" label="English Captions" default>
+                        
+                    </video>
+                    <p class="video-caption"><em>Caption: HTML INTRODUCTION.</em></p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Semantic Section: Interactive Form -->
+        <section id="contact">
+            <h2>Interactive Form</h2>
+            <form action="#" method="post">
+                <!-- Name (Text Input) -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <!-- Email (Text Input) -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+
+                <!-- Gender (Radio Buttons) -->
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male" required> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                </div>
+
+                <!-- Favorite Hobbies (Checkboxes) -->
+                <div class="form-group">
+                    <label>Favorite Hobbies:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="hobbies" value="coding"> Coding</label>
+                        <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+                        <label><input type="checkbox" name="hobbies" value="gaming"> Gaming</label>
+                        <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Form</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <p>&copy; 2026 Lab Exercise 4. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
