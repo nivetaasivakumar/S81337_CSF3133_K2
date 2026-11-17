@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Error 1 (Line 4-5): Missing viewport meta tag for responsive design -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+  
+    <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+    <!-- 
+      1. Line 9: Invalid value 'no' used in list-style-type (should be 'none').
+      2. Line 17: Invalid text-decoration value 'overlined' (should be 'overline').
+      3. Line 20: Missing colon ':' in property declaration 'color #333333' (should be 'color: #333333').
+      4. Line 22: Unclosed/malformed CSS rule block for tag/class selector 'highlight' (missing '.' or '#' and proper nesting syntax).
+      5. Line 34: Broken hyperlink target value 'href="menu"' (should point to section id '#menu').
+      6. Line 43 & 46: Duplicate use of id attribute 'id="item"' (IDs must be unique; changed to class or unique IDs).
+      7. Line 54: Incorrect video source file type attribute value 'type="mp4"' (should be 'type="video/mp4"').
+      8. Line 22-26 (Internal CSS): Misplaced internal styles that conflicted with structure; cleaned up and separated into cafe.css.
+    -->
+
+    <header>
+        <h1>e-Café Campus</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <!-- Error 5 Fix: href changed from "menu" to "#menu" -->
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="menu">
+        <h2>Today's Menu</h2>
+        <p class="intro">Freshly brewed coffee and local delights every day.</p>
+        
+        <!-- Error 6 Fix: Changed repeated id="item" to class="item" -->
+        <article class="item">
+            <h3>Kopi Tarik</h3>
+            <p>Old Price: <span class="old-price">RM 4.50</span> | New Price: <span class="highlight">RM 3.50</span></p>
+        </article>
+
+        <article class="item">
+            <h3>Nasi Lemak</h3>
+            <p>Old Price: <span class="old-price">RM 6.00</span> | New Price: <span class="highlight">RM 5.00</span></p>
+        </article>
+    </section>
+
+    <section id="video">
+        <h2>Watch Our Story</h2>
+      
+        <figure>
+            <video width="400" height="300" controls>
+                <!-- Error 7 Fix: type changed from "mp4" to "video/mp4" -->
+                <source src="cafe.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>Behind the scenes at e-Café Campus.</figcaption>
+        </figure>
+    </section>
+
+    <!-- New Feedback Section with Form -->
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+        <form class="feedback-form" action="#" method="POST">
+            <label for="fb-name">Name:</label><br>
+            <input type="text" id="fb-name" name="name" required><br><br>
+
+            <label for="fb-email">E-mail:</label><br>
+            <input type="email" id="fb-email" name="email" required><br><br>
+
+            <label>Visit Type:</label><br>
+            <input type="radio" id="dine-in" name="visit_type" value="Dine-in">
+            <label for="dine-in">Dine-in</label>
+            <input type="radio" id="take-away" name="visit_type" value="Take-away">
+            <label for="take-away">Take-away</label><br><br>
+
+            <label>Favourite Items (Choose at least 3):</label><br>
+            <input type="checkbox" id="item1" name="fav" value="Kopi Tarik">
+            <label for="item1">Kopi Tarik</label><br>
+            <input type="checkbox" id="item2" name="fav" value="Nasi Lemak">
+            <label for="item2">Nasi Lemak</label><br>
+            <input type="checkbox" id="item3" name="fav" value="Roti Canai">
+            <label for="item3">Roti Canai</label><br><br>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus</p>
+        <address>
+            Reach us at: <a href="mailto:support@ecafe.edu.my">support@ecafe.edu.my</a>
+        </address>
+    </footer>
+</body>
+</html>
